@@ -1,0 +1,67 @@
+export type Role = "ADMIN" | "LEARNER";
+export type Level = "BEGINNER" | "INTERMEDIATE" | "ADVANCED";
+
+export interface User {
+    id: string;
+    name: string;
+    email: string;
+    role: Role;
+    createdAt: string;
+}
+
+export interface Todo {
+    id: string;
+    label: string;
+    order: number;
+    stepId: string;
+}
+
+export interface Step {
+    id: string;
+    title: string;
+    description: string;
+    resources: string[];
+    estimatedHours: number;
+    order: number;
+    roadmapId: string;
+    todos: Todo[];
+}
+
+export interface Roadmap {
+    id: string;
+    title: string;
+    description: string;
+    category: string;
+    level: Level;
+    tags: string[];
+    published: boolean;
+    createdAt: string;
+    updatedAt: string;
+    createdById: string;
+    createdBy?: { name: string; email: string };
+    steps: Step[];
+    _count?: { enrollments: number };
+}
+
+export interface TodoProgress {
+    id: string;
+    enrollmentId: string;
+    todoId: string;
+    completed: boolean;
+    completedAt?: string | null;
+}
+
+export interface Enrollment {
+    id: string;
+    userId: string;
+    roadmapId: string;
+    enrolledAt: string;
+    progress: TodoProgress[];
+    roadmap?: Roadmap;
+}
+
+export interface RoadmapStats {
+    totalEnrollments: number;
+    completionRate: number;
+    averageProgress: number;
+}
