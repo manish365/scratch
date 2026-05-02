@@ -1,0 +1,95 @@
+.cart-container {
+  .cart-right {
+    position: sticky;
+    top: 180px;
+  }
+
+  .shopping-step {
+    ul {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      display: flex;
+      overflow: hidden;
+
+      li {
+        min-width: 33.3%;
+        padding: 9px 15px;
+        background: #e9e9e9;
+        font-size: 15px;
+        text-align: center;
+        position: relative;
+      }
+
+      li.active-step {
+        color: #fff !important;
+        background: #a39161 !important;
+      }
+
+      li:after {
+        content: "";
+        background: #fff;
+        width: 10px;
+        height: 51px;
+        position: absolute;
+        right: -3px;
+        top: -2px;
+        transform: rotate(195deg);
+        z-index: 9;
+      }
+    }
+  }
+
+  .cart-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 7px;
+  }
+
+  .btn-continue-shopp {
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 1px solid #a39161;
+    border-radius: 25px;
+    color: #000 !important;
+  }
+
+  .billing-detail-section {
+    border-radius: 5px;
+    background: url(https://www.uaeflowers.com/assets/template/templateuae/image/payment-billing-bg.png);
+    background-size: 100% 100%;
+    height: 405px;
+  }
+  .right-cart{
+    h2{
+      font-size: 20px;
+      margin-top: 0;
+    }
+    .checkout-btn{
+      background: #917938;
+      color: #fff;
+      padding: .45rem 20px;
+      border-radius: 0;
+      font-size: 19px;
+      width: 180px;
+      border-radius: 4px;
+      border: none;
+      font-size: 15px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      @media (max-width: 1450px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px){
+  .cart-container .shopping-step ul li{
+      padding: 6px 10px;
+      font-size: 13px;
+  }
+}

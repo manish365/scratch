@@ -1,0 +1,70 @@
+@import '../partials/breakpoints.scss';
+
+.dashboard-header-container.container-fluid {
+    @include breakpoint(tablet-lg) {
+        width: 100%;
+        margin: 0;
+        padding: 0 6px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @include breakpoint(phone) {
+        padding: 0 1rem;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+.dashboard-header-container {
+    .logo-img {
+        display: inline-flex;
+        padding-right: 16px;
+        // display: none;
+
+        @include breakpoint(tablet-lg) {
+            display: block;
+        }
+
+        @include breakpointMax(phone-sm) {
+            display: block;
+        }
+
+        @include breakpointMax(tablet-md) {
+            display: block;
+        }
+
+        @media all and (min-width: 700px) {
+            width: 160px;
+            flex: 1;
+        }
+
+        @media all and (min-width: 960px) {
+            order: 0;
+        }
+    }
+
+    .feed-right-header {
+        padding-top: 12px;
+        .right-header-parts {
+            z-index: 2;
+            flex-flow: row wrap;
+            flex: 1 1 auto;
+        }
+        ul {
+            margin: 0;
+        }
+
+        .lg-aw {
+            width: 300px;
+            padding: 6px !important;
+            text-align: center;
+        }
+    }
+}

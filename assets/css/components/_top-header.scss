@@ -1,0 +1,88 @@
+@import '../partials/breakpoints.scss';
+
+
+.top-allpage-section {
+    background: #000;
+    padding: 2px 0;
+    text-align: center;
+    @include breakpointMax(phone-sm) {
+        display: none;
+    }
+    @include breakpointMax(tablet-md) {
+        display: none;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    a {
+        color: #fff;
+        padding-left: 35px;
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    a:hover {
+        color: #fff;
+    }
+    a:first-child {
+        margin-left: 15px;
+    }
+    a:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        background: #fff;
+        height: 12px;
+        width: 1px;
+    }
+}
+p {
+    letter-spacing: .5px;
+    line-height: 25px;
+}
+.top-social {
+    float: right;
+    margin-top: 0;
+    position: absolute;
+    top: 1px;
+    right: 27px;
+    a {
+        padding: 0;
+      }
+    a::after{
+        display: none;
+    }
+}
+.menu-areas.fixed {
+    @include breakpointMax(phone-sm) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: #fff;
+    }
+    @include breakpointMax(tablet-md) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: #fff;
+    }
+}
+// @media (max-width: 991.98px) {
+//     .top-allpage-section{
+//         display: none;
+//     }
+// }
+// @media (max-width: 575.98px) {
+//     .top-allpage-section{
+//         display: none;
+//     }
+// }

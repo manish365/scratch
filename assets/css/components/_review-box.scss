@@ -1,0 +1,39 @@
+.review-box {
+  box-shadow: 0 0 4px 0 rgb(134 134 134 / 30%);
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+    background: url(../../images/rew-bottom.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    background: url(../../images/rew-top.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+
+  &__header {
+    font-size: 18px;
+    font-weight: 400;
+    color: #222;
+  }
+
+  &__star {
+    color: #ff9500;
+  }
+
+  &__footer {
+    align-items: flex-end;
+    padding-right: .5rem;
+  }
+}

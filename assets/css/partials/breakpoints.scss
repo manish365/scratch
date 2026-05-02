@@ -1,0 +1,47 @@
+// A map of breakpoints.
+$breakpoints: (
+  phone-sm: 420px,
+  phone: 767px,
+  tablet-md: 991.98px,
+  tablet-lg: 1024px,
+  desktop-lg: 1199.98px,
+  desktop-xl: 1399.98px,
+  desktop-xxl: 1442px,
+  desktop-xxxl: 1755px,
+);
+
+@mixin breakpoint($breakpoint) {  // For media-breakpoint-up. So No XS Device allowed.
+
+    // If the breakpoint exists in the map.
+	@if map-has-key($breakpoints, $breakpoint) {
+	
+	// Get the breakpoint value.
+	$breakpoint-value: map-get($breakpoints, $breakpoint);
+	
+	//Build the media query
+		@media (min-width: $breakpoint-value) {
+			@content;
+		}
+	} 
+}
+
+@mixin breakpointMax($breakpoint) {  // For media-breakpoint-down. So No XXL Device allowed.
+
+    // If the breakpoint exists in the map.
+	@if map-has-key($breakpoints, $breakpoint) {
+	
+	// Get the breakpoint value.
+	$breakpoint-value: map-get($breakpoints, $breakpoint);
+	
+	//Build the media query
+		@media (max-width: $breakpoint-value) {
+			@content;
+		}
+	} 
+}
+
+@media (min-width: 1580px){
+	.container-fluid {
+		width: 1580px !important;
+	}
+}

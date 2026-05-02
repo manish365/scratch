@@ -1,0 +1,14 @@
+/* Imported Functions and Variables mandatory */
+
+// Main Bootstrap SCSS Addition For Reactjs
+@import "~bootstrap/scss/bootstrap";
+@import 'react-calendar/dist/Calendar.css';
+
+// import font
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+// import icons
+@import './fonts/icons/icons.css';
+
+// import main
+@import './main.scss';

@@ -1,0 +1,63 @@
+#calendar-modal {
+    width: 540px;
+    .modal-content {
+        border: 2px dashed #fff;
+    }
+    .modal-header {
+        padding: 1rem 1rem 0 !important;
+        border-bottom: initial !important;
+    }
+    .modal-dialog {
+        max-width: 600px;
+    }
+}
+.modal-calendar {
+    width: 100%;
+    float: left;
+}
+.heading-popup {
+    border-bottom: 1px solid #e1dfdf;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+
+.react-calendar {
+    width: 100% !important;
+    border: none !important;
+}
+.react-calendar__navigation__label__labelText {
+    border-bottom: 1px dotted #353535;
+    color: #353535;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+.react-calendar__tile {
+    font-weight: 700;
+    color: #555
+}
+.today {
+    background: #fff;
+}
+.weekend {
+    color: #d10000; /* Set the text color for weekends */
+    font-weight: 700;
+}
+.active-tab {
+    background: #006edc;
+}
+.delivery-price-hiked {
+    background-color: rgb(213, 190, 114);
+}
+
+@media only screen and (max-width: 768px) {
+    #calendar-modal {
+        width: 100%;
+    }
+    .modal-dialog{
+        margin: 0;
+    }
+}

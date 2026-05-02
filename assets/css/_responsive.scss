@@ -1,0 +1,49 @@
+
+@media (max-width: 1370px){
+    .video-col iframe{
+        height: 270px !important;
+    }
+    .carousel-min-height {
+        min-height: 345px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1370px) {
+    .carousel-min-height {
+        min-height: 190px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .left-cart .items-center{
+        display: block;
+    }
+    .left-cart{
+        .p-4 {
+            padding: 10px !important;
+        }
+    }
+    .Instant-popup{width: 95% !important;}
+    .navbar .col-md-2{width: 50%;}
+    .best-seller-section span{display: none !important;}
+    .flowers-categories-section .px-3{
+        padding: 0 !important;
+        .row .col-6:first-child{
+            padding-left: 0 !important;
+        }
+    }
+    .pro-list-top-text{
+        .seperator-box{display: none;}
+        .grow{display: none;}
+    }
+    .breadcrumb{padding: 0;}
+    .carousel-min-height {
+        min-height: 105px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .carousel-min-height {
+        min-height: 88px;
+    }
+}

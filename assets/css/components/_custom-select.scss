@@ -1,0 +1,25 @@
+.custom-react-select {
+    .custom-control {
+        border: none;
+        border-radius: 0;
+
+        &:hover,
+        &:focus {
+            border-color: #fff;
+            box-shadow: none;
+        }
+    }
+  
+    .custom-ValueContainer {
+        padding: 0px 4px !important;
+    }
+
+    .custom-option {
+      color: #495057;
+      background-color: #fff;
+    }
+  
+    .custom-single-value {
+      color: #495057;
+    }
+}

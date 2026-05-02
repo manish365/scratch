@@ -1,0 +1,174 @@
+#offer-popup {
+    z-index: 9999;
+    position: fixed;
+    background: transparent;
+    bottom: 25px;
+    right: 20px;
+    width: 490px;
+    animation: 500ms slideIn cubic-bezier(.35, .57, .4, .89);
+}
+
+.offer-popup-content {
+    max-height: 480px !important;
+    box-sizing: border-box;
+    height: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.offer-popup-header {
+    .close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        right: -7px;
+        top: -2px;
+        z-index: 2;
+    }
+
+    word-wrap: break-word;
+    font-family: "Times New Roman",
+    Times,
+    Baskerville,
+    Georgia,
+    serif;
+
+    h1 {
+        color: #241c15;
+        font-weight: inherit;
+        line-height: 1.25;
+        margin-bottom: 12px;
+        font-size: 40px;
+    }
+
+    p {
+        color: #241c15;
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+}
+.offer-popup-body {
+    .content-formFields {
+        margin-top: 20px;
+        padding: 0 5px;
+    }
+    .form-fieldWrapper {
+        margin: 0 0 24px;
+
+        .invalid-error-msg {
+            max-height: 200px;
+            color: #db3a1b;
+        }
+    }
+    .invalid-error-msg {
+        white-space: normal;
+        word-wrap: break-word;
+        width: 100%;
+        letter-spacing: 0.02em;
+        max-width: 550px;
+        font-size: 12px;
+        line-height: 1.38461538em;
+        font-weight: 700;
+        position: relative;
+    }
+    label {
+        font-family: "Times New Roman",
+        Times,
+        Baskerville,
+        Georgia,
+        serif;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        color: rgb(36, 28, 21);
+        width: auto;
+        padding-bottom: 6px;
+    }
+    input {
+        min-width: 45px;
+        min-height: 36px;
+        display: inline-block;
+        background-color: #ffffff;
+        border: 2px solid #c9c9c9;
+        border-radius: 3px;
+        width: 100%;
+        padding: 0 0.4em;
+
+        &:hover,
+        &:active {
+            border-color: #838383;
+        }
+        &.invalid-error {
+            border: 2px solid #e85c41 !important;
+        }
+    }
+    .help-text {
+        color: rgb(36, 28, 21);
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .content-footer {
+        .content_button {
+            margin-bottom: 20px;
+            height: 36px;
+            button {
+                font-size: 16px;
+                color: rgb(238, 238, 238);
+                background-color: rgb(17, 17, 17);
+                border: 0 none;
+                border-radius: 3px;
+                font-weight: 700;
+                height: 36px;
+                letter-spacing: 0.01em;
+                line-height: 36px;
+                margin-right: 0;
+                overflow: hidden;
+                padding: 0 18px;
+                text-align: center;
+                vertical-align: middle;
+                white-space: normal;
+                &:hover,
+                &:active {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+        .content_footer-text {
+            word-wrap: break-word;
+            font-family: "Times New Roman",
+            Times,
+            Baskerville,
+            Georgia,
+            serif;
+            p {
+                color: #241c15;
+                font-size: 16px;
+                margin-bottom: 0;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #offer-popup {
+        bottom: 25px;
+        right: 0;
+        width: 100%;
+    }
+    .offer-popup-content{
+        width: 100%;
+    }
+}
